@@ -1,219 +1,116 @@
-# 🛡️ RansomWatch — Real-Time Ransomware Detection System
+# 🌾 AgroCast AI — Smart Farm Intelligence Platform
 
-RansomWatch is a **real-time ransomware detection and response system** that monitors file system activity, identifies suspicious behavior patterns, classifies potential ransomware threats, and automatically takes defensive actions to reduce security risks.
+AgroCast AI is an intelligent farming platform that combines **weather data, satellite insights, and machine learning** to help farmers make better decisions through real-time forecasts, risk alerts, and actionable recommendations.
 
 ---
 
 ## 🚀 Features
 
-### 🔍 Real-Time File Monitoring
+* 🌦 **Weather & Climate Intelligence**
+  Real-time weather data with predictive forecasting.
 
-* Tracks file creation, modification, deletion, and renaming
-* Continuously monitors system activity for unusual behavior
+* 🤖 **Machine Learning Forecasting**
+  Temperature and climate prediction using ML models.
 
-### 🧠 Behavior-Based Detection
+* 🛰 **Satellite Data Integration**
+  Uses satellite insights for crop and land monitoring.
 
-* Detects ransomware using behavioral patterns instead of static signatures
-* Identifies suspicious actions such as mass file changes and abnormal extensions
+* ⚠️ **Smart Risk Alerts**
+  Detects climate risks and provides actionable farming advice.
 
-### 🚨 Smart Alerting System
+* 🌍 **Multi-Farm Management**
+  Manage multiple farm locations with history and comparisons.
 
-* Generates instant alerts on suspicious activity
-* Uses cooldown mechanisms to prevent alert spamming
-* Supports both CLI and desktop notifications
+* 📊 **Interactive Dashboard**
+  Visual insights including trends, forecasts, and alerts.
 
-### 🧬 Ransomware Classification
+* 🔔 **Notification System**
+  Alerts via WhatsApp, SMS, and Email.
 
-* Classifies detected threats into known ransomware families
-* Supports detection of:
-
-  * WannaCry
-  * LockBit
-  * Ryuk
-  * Conti
-  * REvil / Sodinokibi
-  * And more
-
-### 📊 Live Monitoring Dashboard
-
-* Displays real-time alerts and file activity
-* Provides a clear and interactive view of system status
-
-### 📋 Incident Reporting
-
-* Generates structured reports of events, detections, and actions
-* Useful for analysis, auditing, and security improvements
-
-### 🧯 Automated Response & Containment
-
-* Automatically responds to threats by:
-
-  * Restricting file access
-  * Pausing monitoring
-  * Stopping suspicious processes
-* Helps minimize damage during an attack
-
-### 🧪 Safe Simulation Mode
-
-* Simulates ransomware-like behavior in a controlled environment
-* Allows safe testing without real malware
+* 🌐 **Multilingual Support**
+  Supports English and Hindi for better accessibility.
 
 ---
 
 ## 🏗️ Project Structure
 
-```
-RansomWatch/
-│
-├── monitor.py            # File system monitoring
-├── analyzer.py           # Behavior analysis engine
-├── rules.py              # Detection rules & thresholds
-├── classifier.py         # Ransomware classification
-├── alerting.py           # Alert system
-├── notifier.py           # Desktop notifications
-├── response.py           # Containment & response actions
-├── report.py             # Incident report generator
-├── logger_module.py      # Logging system
-│
-├── dashboard_server.py   # Backend (Flask + SocketIO)
-├── dashboard.html        # Web dashboard UI
-│
-├── simulator.py          # Safe ransomware simulation
-├── cli_menu.py           # Main entry point
-│
-├── logs/                 # Log files
-└── reports/              # Generated reports
+```bash id="agro1"
+AgroCast-AI/
+├── backend_api.py        # Main Flask backend
+├── backend_database.py   # Database models & schema
+├── security.py           # Authentication (JWT)
+├── ml_engine.py          # ML forecasting logic
+├── processor.py          # Risk analysis & recommendations
+├── data_engine.py        # Weather data integration
+├── satellite_engine.py   # Satellite data processing
+├── templates/            # Frontend pages
+├── frontend/             # UI (CSS, JS)
+├── wsgi.py               # Deployment entry
+└── requirements.txt
 ```
 
 ---
 
 ## ⚙️ Installation
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/ransomwatch.git
-cd ransomwatch
-```
-
-### 2. Install dependencies
-
-```bash
-pip install watchdog flask flask-socketio plyer
-```
-
-### Optional (Windows notifications)
-
-```bash
-pip install win10toast
+```bash id="agro2"
+git clone https://github.com/your-username/agrocast-ai.git
+cd agrocast-ai
+pip install -r requirements.txt
 ```
 
 ---
 
 ## ▶️ Usage
 
-Run the system:
-
-```bash
-python cli_menu.py
+```bash id="agro3"
+python backend_api.py
 ```
 
-Then open the dashboard:
+Open in browser:
 
-👉 http://localhost:5000
-
----
-
-## 📌 CLI Options
-
-```
-[1] Start Monitoring (30 seconds)
-[2] Start Monitoring (custom duration)
-[3] Run Safe Simulation
-[4] View Logs
-[5] Generate Report
-[6] View Summary
-[7] Open Dashboard
-[0] Exit
-```
+👉 http://127.0.0.1:8000
 
 ---
 
-## 🔎 Detection Logic
+## 🔎 How It Works
 
-RansomWatch detects potential ransomware based on:
-
-* Suspicious file extensions (e.g., `.locked`, `.enc`)
-* High volume of file changes in a short time
-* Mass file renaming events
-* Rapid activity within the same directory
-* Behavioral patterns indicating abnormal activity
+* Collects **weather + satellite data**
+* Processes data using **ML models**
+* Generates **forecasts, risk alerts, and insights**
+* Displays results via an interactive dashboard
 
 ---
 
-## 📊 Dashboard Features
+## 📝 Key Capabilities
 
-* 📈 Real-time activity visualization
-* ⚠️ Live alert notifications
-* 🔴 Ransomware detection insights
-* 📁 File activity tracking
-* 📋 Incident report viewing
-
----
-
-## 🧯 Response Actions
-
-* Pause monitoring
-* Restrict file write access
-* Stop suspicious processes
-* Trigger automated containment
-
----
-
-## 🧪 Simulation Mode
-
-* Simulates ransomware-like activities
-* Includes:
-
-  * Mass file modifications
-  * Mass file renaming
-  * Encryption-like behavior patterns
-* Enables safe testing of detection system
-
----
-
-## 📝 Logging
-
-* All events and alerts are automatically recorded
-* Logs are stored in:
-
-```
-/logs/ransomwatch_*.log
-```
+* Farm-specific forecasting
+* Historical trend analysis
+* Alert customization
+* Data-driven farming decisions
 
 ---
 
 ## ⚠️ Disclaimer
 
-This project is intended for **educational and defensive security purposes only**.
-Do **NOT** use it in unauthorized environments.
+This project is for **educational and research purposes only**.
 
 ---
 
 ## 👨‍💻 Author
 
-**Your Name**
-GitHub: https://github.com/your-username
+Your Name
+https://github.com/your-username
 
 ---
 
-## ⭐ Future Improvements
+## 🌱 Future Improvements
 
-* Machine learning-based detection
-* Cloud-based alerting system
-* Multi-device monitoring
-* Integration with SIEM/security tools
+* Advanced ML models
+* Mobile application
+* Real-time IoT integration
+* Scalable cloud deployment
 
 ---
 
-## 🛡️ Stay Safe. Detect Early. Respond Faster.
+## 🌾 Empowering Smarter Farming with AI

@@ -100,7 +100,7 @@ This project is for **educational and research purposes only**.
 ## 👨‍💻 Author
 
 Your Name
-https://github.com/your-username
+https://github.com/shreyanirmal671
 
 ---
 
